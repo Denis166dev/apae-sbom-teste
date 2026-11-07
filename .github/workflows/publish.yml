@@ -1,0 +1,20 @@
+name: Publish test image
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  packages: write
+  id-token: write
+  attestations: write
+
+jobs:
+  publish:
+    uses: IFPBEsp/APAE-INFRA/.github/workflows/docker-build-publish-image.yml@9292183b46e059a7a3db01da08f6a50bc3cb117e
+    with:
+      context: .
+      dockerfile: ./Dockerfile
+      image-name: apae-sbom-teste
+      scan-severity: CRITICAL
