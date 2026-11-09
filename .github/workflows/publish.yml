@@ -12,7 +12,7 @@ permissions:
 
 jobs:
   publish:
-    uses: IFPBEsp/APAE-INFRA/.github/workflows/docker-build-publish-image.yml@<NOVO_SHA>
+    uses: IFPBEsp/APAE-INFRA/.github/workflows/docker-build-publish-image.yml@6427ad688fe30d993b18db48e7e5bde3dc5d6b1f
     with:
       context: .
       dockerfile: ./Dockerfile
